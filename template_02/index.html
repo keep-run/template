@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="top-bar">
-      <section class="top-bar__segment top-bar__segment--primary"></section>
-      <section class="top-bar__segment top-bar__segment--secondary"></section>
+    <section class="notice">
+      <p class="notice__label">先说一声</p>
+      <p class="notice__text">
+        下面才是模板正文。喜欢的话，评论区留个言，我私信发你呀——免费，无套路。
+      </p>
     </section>
+
+    <section class="top-bar">&nbsp;</section>
 
     <section class="content">
       <p class="eyebrow">日迹 · 新品发布</p>
@@ -71,18 +75,28 @@
       </section>
 
       <section class="stats">
-        <section class="stats__item">
-          <p class="stats__value stats__value--blue">3 秒</p>
-          <p class="stats__label">完成一次记录</p>
-        </section>
-        <section class="stats__item">
-          <p class="stats__value stats__value--sage">0 压力</p>
-          <p class="stats__label">无连续打卡</p>
-        </section>
-        <section class="stats__item">
-          <p class="stats__value stats__value--coral">iOS</p>
-          <p class="stats__label">现已上线</p>
-        </section>
+        <table
+          class="stats__table"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+        >
+          <tr>
+            <td class="stats__cell" width="33.33%" align="center" valign="top">
+              <p class="stats__value stats__value--blue">3 秒</p>
+              <p class="stats__label">完成一次记录</p>
+            </td>
+            <td class="stats__cell" width="33.33%" align="center" valign="top">
+              <p class="stats__value stats__value--sage">0 压力</p>
+              <p class="stats__label">无连续打卡</p>
+            </td>
+            <td class="stats__cell" width="33.33%" align="center" valign="top">
+              <p class="stats__value stats__value--coral">iOS</p>
+              <p class="stats__label">现已上线</p>
+            </td>
+          </tr>
+        </table>
       </section>
 
       <h2 class="section-title section-title--coral">适合谁用</h2>
