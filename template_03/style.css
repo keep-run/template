@@ -1,4 +1,4 @@
-/* 赭笺 · 生活随笔模版 */
+/* 赭笺 · 生活随笔模板 */
 
 body {
   margin: 0;
@@ -9,6 +9,33 @@ body {
   color: #2c2c2c;
   line-height: 1.8;
   -webkit-text-size-adjust: 100%;
+}
+
+.notice {
+  width: 100%;
+  margin: 0;
+  padding: 18px 16px 16px;
+  box-sizing: border-box;
+  background-color: #faf0e8;
+}
+
+.notice__label {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #c45c26;
+}
+
+.notice__text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #6a4a38;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
 }
 
 /* 顶部色条 */
