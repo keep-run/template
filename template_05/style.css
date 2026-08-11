@@ -1,0 +1,407 @@
+/* 杏笺 · 清单模板
+ * 方法/科普干货：丹红主色 + 浅金点缀，实色 hex，便于复制进微信
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
+    Arial, sans-serif;
+  color: #2c2420;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+
+.notice {
+  width: 100%;
+  margin: 0;
+  padding: 18px 16px 16px;
+  box-sizing: border-box;
+  background-color: #f3e6e2;
+}
+
+.notice__text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #5c3530;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.top-bar {
+  width: 100%;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background-color: #8b3a3a;
+  background-image: linear-gradient(
+    to right,
+    #8b3a3a 0%,
+    #8b3a3a 62%,
+    #c4a06a 62%,
+    #c4a06a 100%
+  );
+}
+
+.content {
+  width: 100%;
+  margin: 0;
+  padding: 32px 0 48px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.title {
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #1f1816;
+  letter-spacing: 0.3px;
+}
+
+.meta {
+  margin: 0 0 28px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #eadfd8;
+  font-size: 13px;
+  color: #8a7a72;
+}
+
+.meta__tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #f3e6e2;
+  color: #8b3a3a;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.meta__author {
+  color: #5c4a44;
+}
+
+.meta__dot {
+  margin: 0 8px;
+  color: #d4c4bc;
+}
+
+.lead {
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  background-color: #f7f0ec;
+  border-left: 3px solid #8b3a3a;
+  font-size: 15px;
+  color: #4a3c38;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.paragraph {
+  margin: 0 0 22px;
+  padding: 0;
+  font-size: 16px;
+  color: #33302e;
+  text-align: justify;
+  word-break: break-word;
+}
+
+/* 经典摘句 */
+.classic {
+  width: 100%;
+  margin: 8px 0 36px;
+  padding: 22px 18px;
+  box-sizing: border-box;
+  background-color: #faf6f2;
+  border-top: 1px solid #e8d9cf;
+  border-bottom: 1px solid #e8d9cf;
+  text-align: center;
+}
+
+.classic__label {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #a07850;
+}
+
+.classic__text {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 16px;
+  color: #5c3d32;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+}
+
+.classic__source {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #9a8478;
+}
+
+/* 分节标题：居中，适合分条讲透 */
+.section-head {
+  width: 100%;
+  margin: 40px 0 22px;
+  padding: 0;
+  text-align: center;
+}
+
+.section-head__mark {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #c4a06a;
+}
+
+.section-head__title {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8b3a3a;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.section-head__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #9a8478;
+}
+
+/* 对照要点：误区 / 正确 */
+.point {
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 16px 16px 16px 14px;
+  box-sizing: border-box;
+  border-left: 3px solid #c9896a;
+  background-color: #faf4f1;
+}
+
+.point--warn {
+  border-left-color: #b85c4a;
+  background-color: #faf4f1;
+}
+
+.point--ok {
+  border-left-color: #6b8f7a;
+  background-color: #f3f6f4;
+}
+
+.point--last {
+  margin-bottom: 8px;
+}
+
+.point__num {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #a07850;
+}
+
+.point--warn .point__num {
+  color: #b85c4a;
+}
+
+.point--ok .point__num {
+  color: #5d7a68;
+}
+
+.point__title {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2420;
+  line-height: 1.4;
+}
+
+.point__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #5c524c;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
+}
+
+/* 要点强调 */
+.insight {
+  width: 100%;
+  margin: 28px 0 8px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  background-color: #f3e6e2;
+  border-radius: 0 8px 8px 0;
+  border-left: 3px solid #8b3a3a;
+}
+
+.insight__label {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #8b3a3a;
+}
+
+.insight__text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #4a3530;
+  line-height: 1.8;
+  text-align: justify;
+  word-break: break-word;
+}
+
+/* 功法步骤 */
+.step {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  background-color: #faf6f2;
+  border-radius: 0 8px 8px 0;
+  border-left: 3px solid #c4a06a;
+}
+
+.step--last {
+  margin-bottom: 8px;
+}
+
+.step__badge {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #a07850;
+}
+
+.step__title {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2c2420;
+  line-height: 1.4;
+}
+
+.step__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #5c524c;
+  line-height: 1.8;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.divider {
+  width: 100%;
+  margin: 36px 0 28px;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+
+.divider__line {
+  display: inline-block;
+  width: 48px;
+  height: 3px;
+  background-color: #c4a06a;
+  border-radius: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.ending {
+  width: 100%;
+  margin: 0 0 32px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  background-color: #f7f0ec;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ending__text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #4a3c38;
+  line-height: 1.9;
+}
+
+.tags {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.tag--cinnabar {
+  background-color: #f3e6e2;
+  color: #8b3a3a;
+}
+
+.tag--ink {
+  background-color: #eeeae6;
+  color: #5c524c;
+}
+
+.tag--gold {
+  background-color: #f5efe4;
+  color: #8a6d42;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 24px 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer__end {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 12px;
+  color: #8a7a72;
+}
+
+.footer__note {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #a89f93;
+}
