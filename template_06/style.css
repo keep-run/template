@@ -1,0 +1,400 @@
+/* 语笺 · 对话模板
+ * 左问右答聊天气泡；用 table 占位，避免 float / inline-block 横排在微信里错乱
+ * 实色 hex，便于浏览器复制富文本到微信后颜色稳定
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
+    Arial, sans-serif;
+  color: #2c3333;
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+.notice {
+  width: 100%;
+  margin: 0;
+  padding: 18px 16px 16px;
+  box-sizing: border-box;
+  background-color: #e6f2f0;
+}
+
+.notice__text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #3d5c58;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.top-bar {
+  width: 100%;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background-color: #2f6f6a;
+  background-image: linear-gradient(
+    to right,
+    #2f6f6a 0%,
+    #2f6f6a 62%,
+    #9a6432 62%,
+    #9a6432 100%
+  );
+}
+
+.content {
+  width: 100%;
+  margin: 0;
+  padding: 32px 0 48px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.title {
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a2423;
+  letter-spacing: 0.4px;
+}
+
+.meta {
+  margin: 0 0 28px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #e5e0d8;
+  font-size: 13px;
+  color: #999;
+}
+
+.meta__tag {
+  display: inline-block;
+  color: #2f6f6a;
+  background-color: #e6f2f0;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+.meta__dot {
+  margin: 0 8px;
+  color: #ddd;
+}
+
+.meta__author {
+  color: #666;
+}
+
+.lead {
+  margin: 0 0 28px;
+  padding: 16px;
+  background-color: #e6f2f0;
+  border-left: 4px solid #2f6f6a;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  color: #3d5c58;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.speakers {
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  background-color: #f7f5f1;
+  border-radius: 8px;
+}
+
+.speakers__row {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.speakers__row + .speakers__row {
+  margin-top: 6px;
+}
+
+.speakers__name {
+  font-weight: 600;
+}
+
+.speakers__name--a {
+  color: #2f6f6a;
+}
+
+.speakers__name--b {
+  color: #9a6432;
+}
+
+.scene {
+  width: 100%;
+  margin: 8px 0 24px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  background-color: #f7f5f1;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.scene--pause {
+  margin: 4px 0 8px;
+  padding: 10px 14px;
+  background-color: transparent;
+}
+
+.scene__text {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #7a7268;
+  line-height: 1.65;
+  letter-spacing: 0.3px;
+}
+
+.paragraph {
+  margin: 0 0 18px;
+  padding: 0;
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.section-title {
+  width: 100%;
+  margin: 32px 0 20px;
+  padding: 16px 14px;
+  box-sizing: border-box;
+  background-color: #f7f5f1;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.section-title__label {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.section-title--teal .section-title__label {
+  color: #2f6f6a;
+}
+
+.section-title--amber .section-title__label {
+  color: #9a6432;
+}
+
+.section-title__text {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a2423;
+  line-height: 1.45;
+}
+
+/* 左问右答：table 占位更稳，少用 float / 纯 inline-block 横排 */
+.chat {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #ffffff;
+}
+
+.chat--last {
+  margin-bottom: 24px;
+}
+
+.chat td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: top;
+  background-color: #ffffff;
+}
+
+.chat__spacer {
+  width: 16%;
+  font-size: 0;
+  line-height: 0;
+}
+
+.chat__main {
+  width: 84%;
+}
+
+.chat__name {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.chat--left .chat__name {
+  color: #2f6f6a;
+  text-align: left;
+}
+
+.chat--right .chat__name {
+  color: #9a6432;
+  text-align: right;
+}
+
+.chat__bubble {
+  margin: 0;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: justify;
+  word-break: break-word;
+}
+
+.chat--left .chat__bubble {
+  background-color: #e6f2f0;
+  color: #2a3d3b;
+  border-radius: 4px 14px 14px 14px;
+}
+
+.chat--right .chat__bubble {
+  background-color: #f6eee4;
+  color: #3d3228;
+  border-radius: 14px 4px 14px 14px;
+}
+
+.insight {
+  width: 100%;
+  margin: 12px 0 28px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  background-color: #eef5f4;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.insight__label {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #2f6f6a;
+  line-height: 1.4;
+}
+
+.insight__text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #3d5c58;
+  line-height: 1.85;
+  word-break: break-word;
+}
+
+.divider {
+  width: 100%;
+  margin: 36px 0 28px;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+
+.divider__line {
+  display: inline-block;
+  width: 48px;
+  height: 3px;
+  background-color: #2f6f6a;
+  border-radius: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.ending {
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  background-color: #e6f2f0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ending__text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #3d5c58;
+  line-height: 1.85;
+}
+
+.tags {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.tag--teal {
+  background-color: #e6f2f0;
+  color: #2f6f6a;
+}
+
+.tag--amber {
+  background-color: #f6eee4;
+  color: #9a6432;
+}
+
+.tag--stone {
+  background-color: #f0eeea;
+  color: #6a6660;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 24px 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer__end {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 12px;
+  color: #9aa8a5;
+}
+
+.footer__note {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #b8c4c1;
+}

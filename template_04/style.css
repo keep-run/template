@@ -1,6 +1,5 @@
-/* 语笺 · 对话模板
- * 左问右答聊天气泡；用 table 占位，避免 float / inline-block 横排在微信里错乱
- * 实色 hex，便于浏览器复制富文本到微信后颜色稳定
+/* 杏笺 · 清单模板
+ * 方法/科普干货：丹红主色 + 浅金点缀，实色 hex，便于复制进微信
  */
 
 body {
@@ -9,8 +8,8 @@ body {
   background-color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
     Arial, sans-serif;
-  color: #2c3333;
-  line-height: 1.8;
+  color: #2c2420;
+  line-height: 1.85;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -19,14 +18,14 @@ body {
   margin: 0;
   padding: 18px 16px 16px;
   box-sizing: border-box;
-  background-color: #e6f2f0;
+  background-color: #f3e6e2;
 }
 
 .notice__text {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  color: #3d5c58;
+  color: #5c3530;
   line-height: 1.75;
   text-align: justify;
   word-break: break-word;
@@ -39,13 +38,13 @@ body {
   padding: 0;
   font-size: 0;
   line-height: 0;
-  background-color: #2f6f6a;
+  background-color: #8b3a3a;
   background-image: linear-gradient(
     to right,
-    #2f6f6a 0%,
-    #2f6f6a 62%,
-    #9a6432 62%,
-    #9a6432 100%
+    #8b3a3a 0%,
+    #8b3a3a 62%,
+    #c4a06a 62%,
+    #c4a06a 100%
   );
 }
 
@@ -62,252 +61,261 @@ body {
   padding: 0;
   font-size: 24px;
   font-weight: 700;
-  line-height: 1.4;
-  color: #1a2423;
-  letter-spacing: 0.4px;
+  line-height: 1.45;
+  color: #1f1816;
+  letter-spacing: 0.3px;
 }
 
 .meta {
   margin: 0 0 28px;
   padding: 0 0 20px;
-  border-bottom: 1px solid #e5e0d8;
+  border-bottom: 1px solid #eadfd8;
   font-size: 13px;
-  color: #999;
+  color: #8a7a72;
 }
 
 .meta__tag {
   display: inline-block;
-  color: #2f6f6a;
-  background-color: #e6f2f0;
-  padding: 2px 8px;
+  padding: 3px 10px;
+  background-color: #f3e6e2;
+  color: #8b3a3a;
   border-radius: 2px;
   font-size: 12px;
+  font-weight: 500;
+}
+
+.meta__author {
+  color: #5c4a44;
 }
 
 .meta__dot {
   margin: 0 8px;
-  color: #ddd;
-}
-
-.meta__author {
-  color: #666;
+  color: #d4c4bc;
 }
 
 .lead {
-  margin: 0 0 28px;
-  padding: 16px;
-  background-color: #e6f2f0;
-  border-left: 4px solid #2f6f6a;
-  border-radius: 0 8px 8px 0;
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  background-color: #f7f0ec;
+  border-left: 3px solid #8b3a3a;
   font-size: 15px;
-  color: #3d5c58;
+  color: #4a3c38;
   line-height: 1.75;
   text-align: justify;
   word-break: break-word;
 }
 
-.speakers {
-  width: 100%;
-  margin: 0 0 28px;
-  padding: 14px 16px;
-  box-sizing: border-box;
-  background-color: #f7f5f1;
-  border-radius: 8px;
-}
-
-.speakers__row {
-  margin: 0;
+.paragraph {
+  margin: 0 0 22px;
   padding: 0;
-  font-size: 13px;
-  color: #666;
-  line-height: 1.7;
+  font-size: 16px;
+  color: #33302e;
+  text-align: justify;
+  word-break: break-word;
 }
 
-.speakers__row + .speakers__row {
-  margin-top: 6px;
-}
-
-.speakers__name {
-  font-weight: 600;
-}
-
-.speakers__name--a {
-  color: #2f6f6a;
-}
-
-.speakers__name--b {
-  color: #9a6432;
-}
-
-.scene {
+/* 经典摘句 / 一句提醒 */
+.classic {
   width: 100%;
-  margin: 8px 0 24px;
-  padding: 12px 14px;
+  margin: 4px 0 28px;
+  padding: 14px 14px;
   box-sizing: border-box;
-  background-color: #f7f5f1;
-  border-radius: 6px;
+  background-color: #faf6f2;
+  border-top: 1px solid #e8d9cf;
+  border-bottom: 1px solid #e8d9cf;
   text-align: center;
 }
 
-.scene--pause {
-  margin: 4px 0 8px;
-  padding: 10px 14px;
-  background-color: transparent;
+.classic__label {
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #a07850;
 }
 
-.scene__text {
-  margin: 0;
+.classic__text {
+  margin: 0 0 6px;
   padding: 0;
-  font-size: 13px;
-  color: #7a7268;
+  font-size: 15px;
+  color: #5c3d32;
   line-height: 1.65;
   letter-spacing: 0.3px;
 }
 
-.paragraph {
-  margin: 0 0 18px;
-  padding: 0;
-  font-size: 16px;
-  color: #333;
-  text-align: justify;
-  word-break: break-word;
-}
-
-.section-title {
-  width: 100%;
-  margin: 32px 0 20px;
-  padding: 16px 14px;
-  box-sizing: border-box;
-  background-color: #f7f5f1;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.section-title__label {
-  margin: 0 0 6px;
+.classic__source {
+  margin: 0;
   padding: 0;
   font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  color: #9a8478;
   line-height: 1.4;
 }
 
-.section-title--teal .section-title__label {
-  color: #2f6f6a;
-}
-
-.section-title--amber .section-title__label {
-  color: #9a6432;
-}
-
-.section-title__text {
-  margin: 0;
-  padding: 0;
-  font-size: 17px;
-  font-weight: 600;
-  color: #1a2423;
-  line-height: 1.45;
-}
-
-/* 左问右答：table 占位更稳，少用 float / 纯 inline-block 横排 */
-.chat {
+/* 分节标题：居中，适合分条讲透 */
+.section-head {
   width: 100%;
-  margin: 0 0 14px;
+  margin: 40px 0 22px;
   padding: 0;
-  border: 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  background-color: #ffffff;
+  text-align: center;
 }
 
-.chat--last {
-  margin-bottom: 24px;
-}
-
-.chat td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: top;
-  background-color: #ffffff;
-}
-
-.chat__spacer {
-  width: 16%;
-  font-size: 0;
-  line-height: 0;
-}
-
-.chat__main {
-  width: 84%;
-}
-
-.chat__name {
-  margin: 0 0 6px;
+.section-head__mark {
+  margin: 0 0 8px;
   padding: 0;
   font-size: 13px;
   font-weight: 600;
+  letter-spacing: 4px;
+  color: #c4a06a;
+}
+
+.section-head__title {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8b3a3a;
   line-height: 1.4;
+  letter-spacing: 1px;
 }
 
-.chat--left .chat__name {
-  color: #2f6f6a;
-  text-align: left;
-}
-
-.chat--right .chat__name {
-  color: #9a6432;
-  text-align: right;
-}
-
-.chat__bubble {
+.section-head__desc {
   margin: 0;
-  padding: 12px 14px;
+  padding: 0;
+  font-size: 13px;
+  color: #9a8478;
+}
+
+/* 对照要点：误区 / 正确；序号与标题同行，小屏更紧凑 */
+.point {
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 11px 12px 11px 12px;
   box-sizing: border-box;
+  border-left: 3px solid #c9896a;
+  background-color: #faf4f1;
+}
+
+.point--warn {
+  border-left-color: #b85c4a;
+  background-color: #faf4f1;
+}
+
+.point--ok {
+  border-left-color: #6b8f7a;
+  background-color: #f3f6f4;
+}
+
+.point--last {
+  margin-bottom: 8px;
+}
+
+.point__title {
+  margin: 0 0 4px;
+  padding: 0;
   font-size: 15px;
-  line-height: 1.75;
+  font-weight: 600;
+  color: #2c2420;
+  line-height: 1.45;
+}
+
+.point__num {
+  margin: 0 8px 0 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #a07850;
+}
+
+.point--warn .point__num {
+  color: #b85c4a;
+}
+
+.point--ok .point__num {
+  color: #5d7a68;
+}
+
+.point__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #5c524c;
+  line-height: 1.6;
   text-align: justify;
   word-break: break-word;
 }
 
-.chat--left .chat__bubble {
-  background-color: #e6f2f0;
-  color: #2a3d3b;
-  border-radius: 4px 14px 14px 14px;
-}
-
-.chat--right .chat__bubble {
-  background-color: #f6eee4;
-  color: #3d3228;
-  border-radius: 14px 4px 14px 14px;
-}
-
+/* 要点强调 */
 .insight {
   width: 100%;
-  margin: 12px 0 28px;
-  padding: 18px 16px;
+  margin: 20px 0 8px;
+  padding: 12px 14px;
   box-sizing: border-box;
-  background-color: #eef5f4;
-  border-radius: 8px;
-  text-align: center;
+  background-color: #f3e6e2;
+  border-radius: 0 8px 8px 0;
+  border-left: 3px solid #8b3a3a;
 }
 
 .insight__label {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   padding: 0;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #2f6f6a;
-  line-height: 1.4;
+  color: #8b3a3a;
 }
 
 .insight__text {
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  color: #4a3530;
+  line-height: 1.65;
+  text-align: justify;
+  word-break: break-word;
+}
+
+/* 功法步骤；标签与标题同行 */
+.step {
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  background-color: #faf6f2;
+  border-radius: 0 8px 8px 0;
+  border-left: 3px solid #c4a06a;
+}
+
+.step--last {
+  margin-bottom: 8px;
+}
+
+.step__title {
+  margin: 0 0 4px;
+  padding: 0;
   font-size: 15px;
-  color: #3d5c58;
-  line-height: 1.85;
+  font-weight: 600;
+  color: #2c2420;
+  line-height: 1.45;
+}
+
+.step__badge {
+  margin: 0 8px 0 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #a07850;
+}
+
+.step__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #5c524c;
+  line-height: 1.65;
+  text-align: justify;
   word-break: break-word;
 }
 
@@ -324,7 +332,7 @@ body {
   display: inline-block;
   width: 48px;
   height: 3px;
-  background-color: #2f6f6a;
+  background-color: #c4a06a;
   border-radius: 2px;
   margin: 0;
   padding: 0;
@@ -332,10 +340,10 @@ body {
 
 .ending {
   width: 100%;
-  margin: 0 0 28px;
+  margin: 0 0 32px;
   padding: 20px 16px;
   box-sizing: border-box;
-  background-color: #e6f2f0;
+  background-color: #f7f0ec;
   border-radius: 8px;
   text-align: center;
 }
@@ -344,8 +352,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  color: #3d5c58;
-  line-height: 1.85;
+  color: #4a3c38;
+  line-height: 1.9;
 }
 
 .tags {
@@ -362,19 +370,19 @@ body {
   font-size: 12px;
 }
 
-.tag--teal {
-  background-color: #e6f2f0;
-  color: #2f6f6a;
+.tag--cinnabar {
+  background-color: #f3e6e2;
+  color: #8b3a3a;
 }
 
-.tag--amber {
-  background-color: #f6eee4;
-  color: #9a6432;
+.tag--ink {
+  background-color: #eeeae6;
+  color: #5c524c;
 }
 
-.tag--stone {
-  background-color: #f0eeea;
-  color: #6a6660;
+.tag--gold {
+  background-color: #f5efe4;
+  color: #8a6d42;
 }
 
 .footer {
@@ -389,12 +397,12 @@ body {
   margin: 0 0 6px;
   padding: 0;
   font-size: 12px;
-  color: #9aa8a5;
+  color: #8a7a72;
 }
 
 .footer__note {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  color: #b8c4c1;
+  color: #a89f93;
 }
